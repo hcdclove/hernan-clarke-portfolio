@@ -1,7 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const port = 3000;
+// Server side security settings
+require('dotenv').config();
+
+const herokuPost = process.env.PORT;
+const localPort = 3000;
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -49,6 +54,4 @@ app.post('/', (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log('Listening on port ' + port);
-});
+app.listen(herokuPost || localPort, () => {});
