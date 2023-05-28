@@ -6,14 +6,13 @@
     <title>HC Porfolio</title>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" id="hc" href="#"><img
+        <a class="navbar-brand heading" id="hc" href="#"><img
           src="../assets/images/hc-photo.png"
           alt="HC"
           height="30"
-        />&nbsp&nbspHernan J. Clarke&nbsp&nbsp</a>
+        /><span1>&nbsp&nbspHernan Clarke&nbsp&nbsp</span1></a>
           
-          </a
-        >
+          </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,13 +27,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="https://hernan-clarke-resume.herokuapp.com/">Resume</a>
+              <a class="nav-link active" aria-current="page" href="https://hernan-clarke-resume.herokuapp.com/"><span>Resume</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Certificates">Certificates</a>
+              <a class="nav-link" href="#Certificates"><span>Certificates</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Patents">Patents</a>
+              <a class="nav-link" href="#Patents"> <span>Patents</span></a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -44,7 +43,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                I can work on...
+               <span> I can work on...</span>
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#Projects">Front-end</a></li>
@@ -53,31 +52,37 @@
               </ul>
             </li>
           </ul>
-          
+          <!-- <div class="emoji-toggle emoji-happy">
+            <input type="checkbox" id="toggle1"  onclick='handleClick(this);' class="toggle">
+            <div class="emoji"></div>
+            <label for="toggle1" class="well"></label>
+          </div> -->
         </div>
       </div>
     </nav>
+  
+   
     <main role="main">
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">PORTFOLIO</h1>
-          <p>
-            Hi, my name is Hernan Clarke and I am a fullstack software developer with superb project leadership and experience in software development using agile processes along with GIT, mothern web tools, and software development frameworks.
-            <br /><br />
-            I welcome you to my portfolio page. Feel free to check my resume, a short
+          <h1 class="display-3">
+            <span>PORTFOLIO</span></h1>
+          <p><span> Hi, my name is Hernan Clarke and I am a fullstack software developer with superb project leadership and experience in software development using agile processes along with GIT, mothern web tools, and software development frameworks.
+           
+            I welcome you to my  page. Feel free to check my resume, a short
             list of frontend and backend projects I created to showcase my web application design and programming skills, my certificates, and my patents.  To reach-out to me, drop me a line at hernanclarke1@gmail.com and I will respond within 24 hours.
-          </p>
+         </span>
+             </p>
           <p class='center'>
-            <a class="btn btn-secondary btn-lg" href="https://hernan-clarke-resume.herokuapp.com/" role="button"
-              >View My Resume &raquo;</a
-            >
+            <a class="btn btn-secondary btn-sm animatedArrow btn-light colorpurple" href="https://hernan-clarke-resume.herokuapp.com/" role="button"
+              ><span>View my resume &raquo;</span> </a>
           </p>
           <hr />
         </div>
       </div>
 
-      <div class='container'>
+      <div>
         <h1 id="Projects"></h1>
         <%- include('./partials/projects'); %>
         <hr />
@@ -88,13 +93,13 @@
         <%- include('./partials/patents'); %>
         
      
-        <script
+       
+ <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
         integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
         crossorigin="anonymous"
       >
     </script>
-
 <script
 src="https://code.jquery.com/jquery-3.6.4.min.js"
 integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
