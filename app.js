@@ -47,6 +47,13 @@ app.post('/', (req, res) => {
       res.redirect(
         'https://github.com/hcdclove/hc-newsletter-signup/tree/master'
       );
+    case 'rumme2':
+      res.redirect('https://majestic-figolla-a96469.netlify.app/');
+
+      break;
+    case 'code2':
+      res.redirect('https://github.com/hcdclove/justapp.git');
+
       break;
 
     default:
