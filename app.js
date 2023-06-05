@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const choice = req.body.choice || req.body.runme1;
-  console.log(choice);
+  // console.log(choice);
   switch (choice) {
     case 'execmng':
       res.render('execmng');

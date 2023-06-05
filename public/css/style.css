@@ -6,6 +6,15 @@
   --black: #54585d;
   --process: #a5a5a5;
 }
+
+.container {
+  width: 360px;
+  margin-left: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
 .container p {
   margin-left: 5px;
   padding-left: 5px;
@@ -96,10 +105,26 @@ div {
   text-align: center;
 }
 
+.image-size {
+  width: 660px;
+  padding: 5px 5px;
+}
+
 .card-size {
   height: 360px;
   width: 260px;
   padding: 5px 5px;
+}
+
+.box-size {
+  width: 660px;
+  padding: 15px 15px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding: 10px 10px;
 }
 
 prj span {
