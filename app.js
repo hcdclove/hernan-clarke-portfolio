@@ -55,7 +55,14 @@ app.post('/', (req, res) => {
       res.redirect('https://github.com/hcdclove/justapp.git');
 
       break;
+    case 'rumme3':
+      res.render('restful');
 
+      break;
+    case 'code3':
+      res.redirect('https://github.com/hcdclove/hc-RESTful-API-Server.git');
+
+      break;
     default:
       break;
   }
