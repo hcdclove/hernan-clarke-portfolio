@@ -15,66 +15,70 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+	res.render('index');
 });
 
 app.post('/', (req, res) => {
-  const choice = req.body.choice || req.body.runme1;
-  // console.log(choice);
-  switch (choice) {
-    case 'execmng':
-      res.render('execmng');
-      break;
-    case 'projmng':
-      res.render('projmng');
-      break;
-    case 'sixsigma':
-      res.render('sixsigma');
-      break;
-    case 'enterprisepm':
-      res.redirect('https://patents.google.com/patent/US20060053043');
-      break;
-    case 'schedulingpatent':
-      res.redirect('https://patents.justia.com/patent/20020015059');
-      break;
-    case 'enterprisewide':
-      res.redirect('https://patents.justia.com/patent/7171375');
-      break;
-    case 'rumme1':
-      res.redirect('https://hc-newsletter-app.herokuapp.com/');
-      break;
-    case 'code1':
-      res.redirect(
-        'https://github.com/hcdclove/hc-newsletter-signup/tree/master'
-      );
-    case 'rumme2':
-      res.redirect('https://majestic-figolla-a96469.netlify.app/');
+	const choice = req.body.choice || req.body.runme1;
+	// console.log(choice);
+	switch (choice) {
+		case 'execmng':
+			res.render('execmng');
+			break;
+		case 'projmng':
+			res.render('projmng');
+			break;
+		case 'sixsigma':
+			res.render('sixsigma');
+			break;
+		case 'enterprisepm':
+			res.redirect('https://patents.google.com/patent/US20060053043');
+			break;
+		case 'schedulingpatent':
+			res.redirect('https://patents.justia.com/patent/20020015059');
+			break;
+		case 'enterprisewide':
+			res.redirect('https://patents.justia.com/patent/7171375');
+			break;
+		case 'rumme1':
+			res.redirect('https://hc-newsletter-app.herokuapp.com/');
+			break;
+		case 'code1':
+			res.redirect(
+				'https://github.com/hcdclove/hc-newsletter-signup/tree/master'
+			);
+		case 'rumme2':
+			res.redirect('https://majestic-figolla-a96469.netlify.app/');
 
-      break;
-    case 'code2':
-      res.redirect('https://github.com/hcdclove/justapp.git');
+			break;
+		case 'code2':
+			res.redirect('https://github.com/hcdclove/justapp.git');
 
-      break;
-    case 'rumme3':
-      res.render('restful');
+			break;
+		case 'rumme3':
+			res.render('restful');
 
-      break;
-    case 'code3':
-      res.redirect('https://github.com/hcdclove/hc-RESTful-API-Server.git');
+			break;
+		case 'code3':
+			res.redirect('https://github.com/hcdclove/hc-RESTful-API-Server.git');
 
-      break;
-    case 'rumme4':
-      res.render('defiatm');
+			break;
+		case 'rumme4':
+			res.render('defiatm');
 
-      break;
-    case 'code4':
-      res.redirect('https://github.com/hcdclove/defiatm.git');
+			break;
+		case 'code4':
+			res.redirect('https://github.com/hcdclove/defiatm.git');
 
-      break;
+			break;
+		case 'rumme5':
+			res.render('microservices');
 
-    default:
-      break;
-  }
+			break;
+
+		default:
+			break;
+	}
 });
 
 app.listen(herokuPost || localPort, () => {});

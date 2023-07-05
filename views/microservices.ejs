@@ -1,0 +1,59 @@
+<%- include('./partials/head'); %>
+
+<div class="container">
+  <br />
+ <h2 class="display-3" ><span2>HC BLOG</span2></h2>
+  
+   <p class='center'>
+           <span>Tech Stack: NodeJS, ExpressJS, ReactJS, Postman, Docker, Kubernate</span>
+          </p>
+
+<div class='center'>
+  <img
+    src="./assets/images/microservices.png"
+    class="card image-size center"
+    alt="HC Event-driven Microservices project"
+  />
+
+  <p>
+   The HC blog is an event-driven microservice app.  It illustrates the use of microservices to create, display, and manage posts and post-comments.
+
+The  microservices are completely independent from each other and do not talk to each other ditrctly.  
+
+The post and comment micro-services generate events everytime one is created. 
+
+Instead of using a third party event-bus, I have created a much simpler event-bus to listen for, broadasts, and manage the generated events.
+
+Services, that for wahtever reason stop working, can use axios to send a request to the query service for any events missed while the service was down.
+
+Each micro-service is placed into a docker container and a docker image is created. See the yaml docker configuration file under the micro-service directorty (ie. "posts/infra/posts.yaml").
+
+I use a kubernate cluster for deployment and orchestration.  Each docker image is placed into a kubernate pod. See configuration file under each service ("ie. posts/k8s/posts.yaml").
+
+A load balancer service is als added for communication to the outside world and to the react client  frontend.
+  </p>
+
+  <img
+    src="./assets/images/myawscluster.png"
+    class="card image-size center"
+    alt="HC RESTful API Server"
+  />
+
+  <p>
+    For this app, I use docker to generate and configure a docker image for each micro service.  I then use Kubernete to orchestrate a collection of nodes/pods each one hosting a docker container with the image of the microservice.
+
+  </p>
+  </p>
+
+  <img
+    src="./assets/images/postman.png"
+    class="card image-size center"
+    alt="Postman tool"
+  />
+
+  <p>
+   I used Postman to test each microservice.
+
+  </p>
+  </div>
+</div>
