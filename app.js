@@ -75,6 +75,12 @@ app.post('/', (req, res) => {
 			res.render('microservices');
 
 			break;
+		case 'code5':
+			res.redirect(
+				'https://github.com/hcdclove/blog-event-driven-microservices.git'
+			);
+
+			break;
 
 		default:
 			break;
